@@ -30,7 +30,7 @@ Solving the system $Ax = b$ where A is n x m and n > m requires a least squares 
 
 The residual vector is just the difference between $Ax$ and $b$, %r = b - Ax$. The square of the residual vector is to be minimized in order to find the "best" or least squares solution. The magnitude of r is what is important. So, direction and sign doesn't matter. Therefore, taking the square of the euclidean norm of the residual vector and minimizing that is the focus of this approach. Recall that the euclidean norm squared can be written in the form of an inner product of a vector with itself. 
 $$||r||^2 = r^Tr = (b - Ax)^T(b - Ax)$$
-$$ = b^Tb - 2x^TA^Tb + x^TA^TAx$$
+$$= b^Tb - 2x^TA^Tb + x^TA^TAx$$
 To minimize this equation, take the derivative and set it equal to zero:
 $$2A^TAX - 2A^Tb = 0$$
 
