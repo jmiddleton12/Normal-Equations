@@ -12,4 +12,4 @@ A good way to intuitively understand the problem is to think of the linear regre
 This figure shows a linear least squares solution to a linear regression problem involving 3 data points. The solution line does not pass through any individual point, but the distance between the line and all the points is as small as possible.
 
 Setting up linear least squares problems is done simply by writing a system of equations where each equation is written in terms of the x_i parameters for each data point depending on hwat type of data is being fit. In general, each equation in the system is of the form: 
-$$f(t,x) = x_1 phi_1 + x_2 phi_2 + ... + x_i phi_i$$
+$$f(t,x) = x_1 \phi_1 + x_2 \phi_2 + ... + x_i \phi_i$$
