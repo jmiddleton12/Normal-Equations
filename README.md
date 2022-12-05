@@ -40,7 +40,7 @@ The alternative derivation still seeks to minimize the residual vector $b- Ax$. 
 
 ![GeometricDerivation](https://user-images.githubusercontent.com/119821953/205566000-c1fc6b63-8e32-4cb4-aa7f-6a5cb576276a.PNG)
 
-Knowing that $r* = b - Ax*$ is orthogonal to the image of A is helpful because that means r* is contained in the orthogonal complement of the image of A. The orthogonal complement of the image of a matrix is equal to the kernal of the transpose of that matrix. Therefore, $r*$ must be contained in the kernal of $A^T$ whihc means $A^Tr* = 0$ leading to this equation:
+Knowing that $r^* = b - Ax^{*}$ is orthogonal to the image of A is helpful because that means r* is contained in the orthogonal complement of the image of A. The orthogonal complement of the image of a matrix is equal to the kernal of the transpose of that matrix. Therefore, $r*$ must be contained in the kernal of $A^T$ whihc means $A^Tr* = 0$ leading to this equation:
 $$A^T(b - Ax) = 0$$
 Which can be simplified to again give the normal equations:
 $$A^TAx = A^Tb$$
