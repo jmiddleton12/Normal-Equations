@@ -33,6 +33,9 @@ $$||r||^2 = r^Tr = (b - Ax)^T(b - Ax)$$
 $$= b^Tb - 2x^TA^Tb + x^TA^TAx$$
 To minimize this equation, take the derivative and set it equal to zero:
 $$2A^TAX - 2A^Tb = 0$$
+Which simplifies to our normal equations:
+$$A^TAx = A^Tb$$
+We know that finding the x which satisifes this equation will be the one which minimizes the square of the magnitude of the residual vector, which is the least square solution, x*.
 
 
 
