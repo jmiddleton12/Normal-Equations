@@ -17,4 +17,30 @@ Where $x_i$ are the parameters of the fit equation and $\phi_i$ are functions of
 
 As promised, the setup of a least squares problem for a linear regression is as follows. There will be 2 x parameters and therefore 2 $\phi(t)$ functions. Conceptually, $x_1$ will be the y intercept of the solution line and $x_2$ is the slope. Therefore, intuitively, each equation in our system is written as $y = x_2t + x_1$. It is now clear what the $\phi(t)$ functions are. $\phi_1(t) = 1$ and $\phi_2(t) = t$. This equation is written for each of the given data points in the set $(t_i,y_i)$ using the matrix form $Ax = b$ where A contains the $\phi_i(t)$ functions given t, b is the vector of corresponding $y_i's$, and x is the vector of unknown parameters.
 
-$[1 2 3; 4 5 6; 7 8 9]$
+$$\[
+  A =
+  \left[ {\begin{array}{ccccc}
+    6 & 1 & 1 & 1\\
+    1 & 6 & 1 & 1\\
+    1 & 1 & 6 & 1\\
+    1 & 1 & 1 & 6\\
+  \end{array} } \right]
+  ,x =
+  \left[ {\begin{array}{ccccc}
+    1\\
+    1\\
+    1\\
+  \end{array} } \right]
+  ,w =
+  \left[ {\begin{array}{ccccc}
+    -\sqrt{1^2 + 1^2 + 1^2}\\
+    0\\
+    0\\
+  \end{array} } \right]
+  =
+  \left[ {\begin{array}{ccccc}
+    -1.7321\\
+    0\\
+    0\\
+  \end{array} } \right]
+\]$$
