@@ -45,7 +45,7 @@ $$A^T(b - Ax) = 0$$
 Which can be simplified to again give the normal equations:
 $$A^TAx = A^Tb$$
 
-Finding the x which satisifes this equation will be the one which minimizes the square of the magnitude of the residual vector, which is the least square solution, x*.
+Finding the x which satisifes this equation will be the one which minimizes the square of the magnitude of the residual vector, the least square solution, x*. And because $A^TA$ is square, this system has a unique solution as A has full column rank (rank(A) = m). In the standard cases where the data points are all unique and the $\phi_i(t)'s$ are formulated properly, the column rank will be full and the normal equations will have a unique solution.
 
 
 
