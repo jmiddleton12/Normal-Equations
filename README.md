@@ -25,7 +25,12 @@ As promised, the setup of a least squares problem for a linear regression is as 
 
 This results in the system shown in the figure where A is n x 2 because there are n data points and 2 x parameters for a line. This same process can be used for any type of fit funtion, but the $\phi_i(t)'s$ will change and there may be more of them. For example, a quadratic fit function uses 3 $\phi_i(t)$ functions and 3 x parameters.
 
-#Deriving the Normal Equations
+## Deriving the Normal Equations
+Solving the system $Ax = b$ where A is n x m and n > m requires a least squares approach because there is no exact solution. So, it is not possible to use standard linear algebra approaches such as inverting A (A is not square) or gaussian elimination. That is where the normal equations come in. They will allow the "best" solution to be found given all the information organized into the A matrix and b vector. Two derivation methods will be discussed, the first is more direct and is based on minimizing the residual vector of the system. The second uses geometric reasoning from linear algebra and gives a better visualization of what is happening.
+
+The residual vector is just the difference between $Ax$ and $b$, %r = b - Ax$. The square of the residual vector is to be minimized in order to find the "best" or least squares solution. The magnitude of r is what is important. So, direction and sign doesn't matter. Therefore, taking the square of the euclidean norm of the residual vector and minimizing that is the focus of this approach. Recall that the euclidean norm squared can be written in the form of an inner product of a vector with itself. 
+$$ ||r||^2 = r^Tr = (b - Ax)^T(b - Ax)$$
+
 
 
 
