@@ -35,7 +35,17 @@ To minimize this equation, take the derivative and set it equal to zero:
 $$2A^TAX - 2A^Tb = 0$$
 Which simplifies to our normal equations:
 $$A^TAx = A^Tb$$
-We know that finding the x which satisifes this equation will be the one which minimizes the square of the magnitude of the residual vector, which is the least square solution, x*.
+
+The alternative derivation still seeks to minimize the residual vector $b- Ax$. As stated above, b is not in the image of A. Therefore, neither are any of the possible residual vectors for any x in $R^m$. Geometrically, it can be seen that the residual vector will be minimized when it is orthogonal to the image of A:
+
+![GeometricDerivation](https://user-images.githubusercontent.com/119821953/205566000-c1fc6b63-8e32-4cb4-aa7f-6a5cb576276a.PNG)
+
+Knowing that $r* = b - Ax*$ is orthogonal to the image of A is helpful because that means r* is contained in the orthogonal complement of the image of A. The orthogonal complement of the image of a matrix is equal to the kernal of the transpose of that matrix. Therefore, $r*$ must be contained in the kernal of $A^T$ whihc means $A^Tr* = 0$ leading to this equation:
+$$A^T(b - Ax) = 0$$
+Which can be simplified to again give the normal equations:
+$$A^TAx = A^Tb$$
+
+Finding the x which satisifes this equation will be the one which minimizes the square of the magnitude of the residual vector, which is the least square solution, x*.
 
 
 
