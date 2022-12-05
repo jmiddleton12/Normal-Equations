@@ -45,8 +45,13 @@ $$A^T(b - Ax) = 0$$
 Which can be simplified to again give the normal equations:
 $$A^TAx = A^Tb$$
 
-Finding the x which satisifes this equation will be the one which minimizes the square of the magnitude of the residual vector, the least square solution, x*. And because $A^TA$ is square, this system has a unique solution as A has full column rank (rank(A) = m). In the standard cases where the data points are all unique and the $\phi_i(t)'s$ are formulated properly, the column rank will be full and the normal equations will have a unique solution.
+Finding the x which satisifes this equation will be the one which minimizes the square of the magnitude of the residual vector, the least square solution, x*. And because $A^TA$ is square, this system has a unique solution if A has full column rank (rank(A) = m). In the standard cases where the data points are all unique and the $\phi_i(t)'s$ are formulated properly, the column rank will be full and the normal equations will have a unique solution.
 
+## Solving the Normal Equations
+The normal equations can be solved using matrix inversion because $A^TA$ will be full column rank and m x m square (ie. invertible). This is how most classical introductory linear algebra textbooks teach the topic because the concepts of orthogonality, geometry and rank are more of a focus than utilizing the normal equations to solve linear least squares problems themselves. 
+$$x* = (A^TA)^{-1}A^Tb = A^{+}b$$
+
+In the context of numerical analysis, matrix inversion is almost never used because it is inefficient and unstable. A useful property of $A^TA$ is that it is symmetric positive definite. This makes it a candidate for Cholesky factorization which is the preffered solution method for the normal equations.
 
 
 
