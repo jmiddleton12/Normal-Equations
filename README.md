@@ -60,8 +60,14 @@ $$x* = (A^TA)^{-1}A^Tb = A^{+}b$$
 In the context of numerical analysis, matrix inversion is almost never used because it is inefficient and unstable. A useful property of $A^TA$ is that it is symmetric positive definite. This makes it a candidate for Cholesky factorization which is the preffered solution method for the normal equations. Cholesky factorization is an algorith for reducing a symmetric, positive definite matrix into a lower triangular matrix times its conjugate transpose:
 $$P = LL^{*}$$
 
-In the case of linear least sqaures with data and fitting functions that are reall numbers, this conjugate transpose becomes simply the transpose. The resulting factorization being a lower triangular ral amtrix times its transpose which is an upper triangular real matrix:
-$$P = LL^T $$
+In the case of linear least sqaures with data and fitting functions that are real numbers, this conjugate transpose becomes simply the transpose. The resulting factorization being a lower triangular real amtrix times its transpose which is an upper triangular real matrix:
+$$A^TA = LL^T $$
+
+Once A^TA is factored using Cholesky factorization, the system can be solved in two steps using foward and backward substitution such as with other matrix decomposition methods:
+
+$$Lz = A^Tb$$, where z is an intermediate result vector.
+
+$$L^Tx = z$$, where x is our x* that corresponds to the least squares solution.
 
 
 
