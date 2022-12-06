@@ -58,7 +58,7 @@ The normal equations can be solved using matrix inversion because $A^TA$ will be
 $$x* = (A^TA)^{-1}A^Tb = A^{+}b$$
 
 In the context of numerical analysis, matrix inversion is almost never used because it is inefficient and unstable. A useful property of $A^TA$ is that it is symmetric positive definite. This makes it a candidate for Cholesky factorization which is the preffered solution method for the normal equations. Cholesky factorization is an algorith for reducing a symmetric, positive definite matrix into a lower triangular matrix times its conjugate transpose:
-$$P = LL* $$
+$$P = LL*$$
 
 In the case of linear least sqaures with data and fitting functions that are reall numbers, this conjugate transpose becomes simply the transpose. The resulting factorization being a lower triangular ral amtrix times its transpose which is an upper triangular real matrix:
 $$P = LL^T $$
