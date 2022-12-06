@@ -73,9 +73,9 @@ The Cholesky algorithm can be written as a sequence of modifying the A matrix an
 
 ![Cholesky](https://user-images.githubusercontent.com/119821953/205804011-b7727767-d608-4b6d-81e2-01e55dcb6f33.PNG)
 
-The algorithm starts with an A matrix, at each step, $L_i$ is computed and then A is modified before going to the next step. The new A is used to form the next $L_i$ for a total of n steps. This algorith is written in a way where only the A and L matrix need to be stored to be more memory efficient. This algorith takes about $1/3n^3$ floating point operations which is about half the cost of LU factorization which is used for arbitrary square matrices. 
+The algorithm starts with an A matrix, at each step, $L_i$ is computed and then A is modified before going to the next step. The new A is used to form the next $L_i$ for a total of n steps. This algorith is written in a way where only the A and L matrix need to be stored to be more memory efficient. This algorith takes about $n^3/3$ floating point operations which is about half the cost of LU factorization which is used for arbitrary square matrices. 
 
-To summarize, solving the normal equations using Cholesky decomposition is done by first computing $A^TA$ and $A^Tb$. Then, the Cholesky algorithm is used to factor $A^TA$ into a form which can be solved using forward and backward substitution resulting in a solution vector, $x*$ which is th eleast squares solution.
+To summarize, solving the normal equations using Cholesky decomposition is done by first computing $A^TA$ and $A^Tb$. Then, the Cholesky algorithm is used to factor $A^TA$ into a form which can be solved using forward and backward substitution resulting in a solution vector, $x*$ which is the least squares solution.
 
 ## Conditioning and Error
-
+The discussion of conditioning and error are where the drawbacks of the normal equations are revealed. Up until now it seems like the normal equations method is great. It is closed form and relatively easy to code or even compute by hand for a small n dimension problem, and it makes sense geometrically to directly use the properties of orthogonality in linear algebra to compute a solution directly. However, conditioning and error associated with the normal equations show why it is rarely used in practice for solving least squares problems, and gradient descent or other optimization methods are more practical ways of approaching least squares problems.
