@@ -21,6 +21,7 @@ $$A^TAx = A^Tb$$
 The normal equations were born from the linear least squares problem. This linear algebra problem arises when the solution of an overdetermined linear system is desired. That is a system of the standard $Ax = b$ form where A is n x m and n > m. In this type of system, the vector b is not contained in the image of A. So, it is impossible to find a solution x that exactly satisfies b. Therefore, finding an x which makes Ax as close as possible to b is the "best" solution. This least squares solution can be denoted as x*.
 
 ![Linear least squares concept](https://user-images.githubusercontent.com/119821953/205551356-4b81ba66-4e14-450c-8d5d-39e1878b9b42.PNG)
+
 Figure 1: Linear Least Squares Explanation
 
 This figure is a representation of the least squares problem. In this case, the image of A is the subspace in R^2 represented by a plane, but the b vector is in R^3. This problem can be expanded to higher dimensions, but the issue remains the same.
@@ -28,6 +29,7 @@ This figure is a representation of the least squares problem. In this case, the 
 A good way to intuitively understand the problem is to think of the linear regression of a line given a set of data points in 2D space. We know our solution vector x* will contain 2 parameters to describe a line, and the A matrix and b vector contain the information about our given points (The exact setup of this system is shown below). Assuming all the data points aren't the same and don't lie on the same line, it is of course not possible to find an equation of a line that goes through all the data points. So, the least squares solution we want to obtain will be the solution x* which describes the equation of the line which minimizes the distance between itself and all the data points.
 
 ![scatterplotpoints](https://user-images.githubusercontent.com/119821953/205553729-20b1a550-9eb4-46cb-80f5-312175b207d0.PNG)
+
 Figure 2: Linear Regression Example
 
 This figure shows a linear least squares solution to a linear regression problem involving 3 data points. The solution line does not pass through any individual point, but the distance between the line and all the points is as small as possible.
@@ -39,7 +41,7 @@ Where $x_i$ are the parameters of the fit equation and $\phi_i$ are functions of
 As promised, the setup of a least squares problem for a linear regression is as follows. There will be 2 x parameters and therefore 2 $\phi(t)$ functions. Conceptually, $x_1$ will be the y intercept of the solution line and $x_2$ is the slope. Therefore, intuitively, each equation in our system is written as $y = x_2t + x_1$. It is now clear what the $\phi(t)$ functions are. $\phi_1(t) = 1$ and $\phi_2(t) = t$. This equation is written for each of the given data points in the set $(t_n,y_n)$ using the matrix form $Ax = b$ where A contains the $\phi_i(t)$ functions given t, b is the vector of corresponding $y_n's$, and x is the vector of unknown parameters.
 
 ![LinearRegressionsetup](https://user-images.githubusercontent.com/119821953/205559521-fdca5a1f-d5fe-40d3-b5f8-c071b6a30318.PNG)
-Figure 3: Linear Least Squares Geometry
+
 
 This results in the system shown in the figure where A is n x 2 because there are n data points and 2 x parameters for a line. This same process can be used for any type of fit function, but the $\phi_i(t)'s$ will change and there may be more of them. For example, a quadratic fit function uses 3 $\phi_i(t)$ functions and 3 x parameters.
 
@@ -57,6 +59,8 @@ $$A^TAx = A^Tb$$
 The alternative derivation still seeks to minimize the residual vector $b- Ax$. As stated above, b is not in the image of A. Therefore, neither are any of the possible residual vectors for any x in $R^m$. Geometrically, it can be seen that the residual vector will be minimized when it is orthogonal to the image of A:
 
 ![GeometricDerivation](https://user-images.githubusercontent.com/119821953/205566000-c1fc6b63-8e32-4cb4-aa7f-6a5cb576276a.PNG)
+
+Figure 4: Linear Least Squares Geometry
 
 Knowing that $r^* = b - Ax* $ is orthogonal to the image of A is helpful because that means r* is contained in the orthogonal complement of the image of A. The orthogonal complement of the image of a matrix is equal to the kernel of the transpose of that matrix. Therefore, $r* $ must be contained in the kernel of $A^T$ which means $A^Tr* = 0$ leading to this equation:
 $$A^T(b - Ax) = 0$$ 
