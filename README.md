@@ -97,7 +97,7 @@ The algorithm starts with an A matrix, at each step, $L_i$ is computed and then 
 To summarize, solving the normal equations using Cholesky decomposition is done by first computing $A^TA$ and $A^Tb$. Then, the Cholesky algorithm is used to factor $A^TA$ into a form which can be solved using forward and backward substitution resulting in a solution vector, $x*$ which is the least squares solution.
 
 ## Conditioning and Error
-The discussion of conditioning and error are where the drawbacks of the normal equations are revealed. Up until now it seems like the normal equations method is great. It is closed form and relatively easy to code or even compute by hand for a small n dimension problem, and it makes sense geometrically to directly use the properties of orthogonality in linear algebra to compute a solution directly. However, conditioning and error associated with the normal equations show why it is rarely used in practice for solving least squares problems, and gradient descent or other optimization methods are more practical ways of approaching least squares problems.
+The discussion of conditioning and error are where the drawbacks of the normal equations are revealed. Up until now it seems like the normal equations method is great. It is closed form and relatively easy to code or even compute by hand for a small n dimension problem, and it makes sense geometrically to directly use the properties of orthogonality in linear algebra to compute a solution directly. However, conditioning and error associated with the normal equations show why it is rarely used in practice for solving least squares problems, and [gradient descent](https://machinelearningcompass.com/machine_learning_math/gradient_descent_for_linear_regression/) or other optimization methods are more practical ways of approaching least squares problems.
 
 The biggest flaw with the normal equations is that their conditioning is inherently poor. $A^TA$ is essentially squaring a matrix which is not ideal for conditioning:
 $$cond(A^TA) = [cond(A)]^2$$
@@ -119,6 +119,8 @@ There is some dispute over whether it was Adrien-Marie Legendre or Carl Friedric
 Bretscher, O. (2019). Linear algebra with applications. Pearson India Education Services.
 
 Forbes, E. G. (1978). The astronomical work of Carl Friedrich Gauss (1777–1855). Historia Mathematica, 5(2), 167–181. https://doi.org/10.1016/0315-0860(78)90048-4
+
+Giba, B. (2021, April 3). Gradient descent for linear regression explained, step by step. Machine Learning Compass. Retrieved December 6, 2022, from https://machinelearningcompass.com/machine_learning_math/gradient_descent_for_linear_regression/ 
 
 Kwiatkowski, R. (2020, December 4). Performing linear regression using the normal equation. Medium. Retrieved December 4, 2022, from https://towardsdatascience.com/performing-linear-regression-using-the-normal-equation-6372ed3c57
 
