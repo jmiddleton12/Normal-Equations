@@ -88,4 +88,5 @@ As a general rule, for $K = cond(A)$ about $log_{10}(K) digits of precision are 
 
 Another major issue with normal equations are their succeptibility to rounding error in finite precision. If entries in A are below the machine precision $\epsilon_{mach}$, then computing $A^TA$ can result in a singular matrix. As discussed above, even when numbers that small aren't being dealt with, computing$A^TA$ still makes the problem more ill-conditioned and rounding error in finite precision further increases the error.
 
-## Applications
+## History and Applications
+
