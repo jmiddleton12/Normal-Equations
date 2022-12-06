@@ -71,5 +71,7 @@ $$L^Tx = z$$ where x is our x* that corresponds to the least squares solution.
 
 The Cholesky algorithm can be written as a sequence of modifying the A matrix and forming L_n matrices which are multiplied successively to ultimately compute L after n steps. Keep in mind that in this general form, A is an arbitrary semmetric, positive definite matrix. In the case of the normal equations, the A matrix we are factoring is actually $A^TA$. Another note about the notation below is that $b_i$ refers to the vector which is a portion of the $A^i$ matrix rather than the b vector which is on the right side of the norm al equations, and B^i is a block matrix which is a sub matrix of $A^i$ reffereing to the remaining part of the $A^i$ matrix where $A^i_{(j,k)}; j>i , k>i$. In an n x n matrix, i = 1, 2,...,n.
 
+![Cholesky](https://user-images.githubusercontent.com/119821953/205804011-b7727767-d608-4b6d-81e2-01e55dcb6f33.PNG)
 
+The algorithm starts with an A matrix, at each step, $L_i$ is computed and then A is modified before going to the next step. The new A is used to form the next $L_i$ for a total of n steps. This algorith is written in a way where only the A and L matrix need to be stored to be more memory efficient. This algorith takes about $1/3n^3$ floating point operations which is about half the cost of LU factorization which is used for arbitrary square matrices. 
 
