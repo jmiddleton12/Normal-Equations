@@ -28,6 +28,7 @@ This figure is a representation of the least squares problem. In this case, the 
 A good way to intuitively understand the problem is to think of the linear regression of a line given a set of data points in 2D space. We know our solution vector x* will contain 2 parameters to describe a line, and the A matrix and b vector contain the information about our given points (The exact setup of this system is shown below). Assuming all the data points aren't the same and don't lie on the same line, it is of course not possible to find an equation of a line that goes through all the data points. So, the least squares solution we want to obtain will be the solution x* which describes the equation of the line which minimizes the distance between itself and all the data points.
 
 ![scatterplotpoints](https://user-images.githubusercontent.com/119821953/205553729-20b1a550-9eb4-46cb-80f5-312175b207d0.PNG)
+Figure 2: Linear Regression Example
 
 This figure shows a linear least squares solution to a linear regression problem involving 3 data points. The solution line does not pass through any individual point, but the distance between the line and all the points is as small as possible.
 
@@ -38,6 +39,7 @@ Where $x_i$ are the parameters of the fit equation and $\phi_i$ are functions of
 As promised, the setup of a least squares problem for a linear regression is as follows. There will be 2 x parameters and therefore 2 $\phi(t)$ functions. Conceptually, $x_1$ will be the y intercept of the solution line and $x_2$ is the slope. Therefore, intuitively, each equation in our system is written as $y = x_2t + x_1$. It is now clear what the $\phi(t)$ functions are. $\phi_1(t) = 1$ and $\phi_2(t) = t$. This equation is written for each of the given data points in the set $(t_n,y_n)$ using the matrix form $Ax = b$ where A contains the $\phi_i(t)$ functions given t, b is the vector of corresponding $y_n's$, and x is the vector of unknown parameters.
 
 ![LinearRegressionsetup](https://user-images.githubusercontent.com/119821953/205559521-fdca5a1f-d5fe-40d3-b5f8-c071b6a30318.PNG)
+Figure 3: Linear Least Squares Geometry
 
 This results in the system shown in the figure where A is n x 2 because there are n data points and 2 x parameters for a line. This same process can be used for any type of fit function, but the $\phi_i(t)'s$ will change and there may be more of them. For example, a quadratic fit function uses 3 $\phi_i(t)$ functions and 3 x parameters.
 
