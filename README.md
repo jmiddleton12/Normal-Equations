@@ -42,6 +42,7 @@ As promised, the setup of a least squares problem for a linear regression is as 
 
 ![LinearRegressionsetup](https://user-images.githubusercontent.com/119821953/205559521-fdca5a1f-d5fe-40d3-b5f8-c071b6a30318.PNG)
 
+Figure 3: Linear Least Squares Matrix Setup
 
 This results in the system shown in the figure where A is n x 2 because there are n data points and 2 x parameters for a line. This same process can be used for any type of fit function, but the $\phi_i(t)'s$ will change and there may be more of them. For example, a quadratic fit function uses 3 $\phi_i(t)$ functions and 3 x parameters.
 
@@ -88,6 +89,8 @@ $$L^Tx = z$$ where x is our x* that corresponds to the least squares solution.
 The Cholesky algorithm can be written as a sequence of modifying the A matrix and forming L_n matrices which are multiplied successively to ultimately compute L after n steps. Keep in mind that in this general form, A is an arbitrary symmetric, positive definite matrix. In the case of the normal equations, the A matrix we are factoring is actually $A^TA$. Another note about the notation below is that $b_i$ refers to the vector which is a portion of the $A^i$ matrix rather than the b vector which is on the right side of the norm al equations, and B^i is a block matrix which is a sub matrix of $A^i$ reffering to the remaining part of the $A^i$ matrix where $A^i_{(j,k)}; j>i , k>i$. In an n x n matrix, i = 1, 2,...,n.
 
 ![Cholesky](https://user-images.githubusercontent.com/119821953/205804011-b7727767-d608-4b6d-81e2-01e55dcb6f33.PNG)
+
+Figure 5: Cholesky Algorithm
 
 The algorithm starts with an A matrix, at each step, $L_i$ is computed and then A is modified before going to the next step. The new A is used to form the next $L_i$ for a total of n steps. This algorithm is written in a way where only the A and L matrix need to be stored to be more memory efficient. It takes about $n^3/3$ floating point operations to compute the Cholesky factorization which is about half the cost of LU factorization which is used for arbitrary square matrices. 
 
