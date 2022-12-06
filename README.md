@@ -24,7 +24,7 @@ The normal equations were born from the linear least squares problem. This linea
 
 Figure 1: Linear Least Squares Explanation
 
-This figure is a representation of the least squares problem. In this case, the image of A is the subspace in R^2 represented by a plane, but the b vector is in R^3. This problem can be expanded to higher dimensions, but the issue remains the same.
+This figure is a representation of the least squares problem. In this case, the image of A is the subspace in $R^2$ represented by a plane, but the b vector is in $R^3$. This problem can be expanded to higher dimensions, but the issue remains the same.
 
 A good way to intuitively understand the problem is to think of the linear regression of a line given a set of data points in 2D space. We know our solution vector x* will contain 2 parameters to describe a line, and the A matrix and b vector contain the information about our given points (The exact setup of this system is shown below). Assuming all the data points aren't the same and don't lie on the same line, it is of course not possible to find an equation of a line that goes through all the data points. So, the least squares solution we want to obtain will be the solution x* which describes the equation of the line which minimizes the distance between itself and all the data points.
 
