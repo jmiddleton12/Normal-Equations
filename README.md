@@ -9,7 +9,7 @@ The normal equations are the closed form solution to least squares problems. The
 $$A^TAx = A^Tb$$
 
 ```
-1.[Linear Least Squares](#linear-least-squares)
+[Linear Least Squares](#linear-least-squares)
 
 
 ```
