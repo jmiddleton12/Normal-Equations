@@ -94,3 +94,18 @@ The history of the normal equations follows closely with the history of least sq
 For centuries, humans desired to fit curves to the shape of the Earth, Moon, and other celestial bodies, and they wanted to find functions to describe the orbital trajectories of the Moon, Earth, and other celestial bodies. Simpler curve fitting methods were used before Marquis Pierre Simon de Laplace started experimenting with more advanced curve fitting methods he created during the late 18th century. He wished to fit an ellipse to a polar cross section of the Earth to more accurately describe the Earth's shape. The main issues with his methods were that the possible error exceeded the accuracy of his instruments, and for overdetermined systems, his methods generated multiple solutions instead of a single "best" solution.
 
 There is some dispute over whether it was Adrien-Marie Legendre or Carl Friedrich Gauss invented linear least squares and the normal equations. However, it was Legendre who first published them in 1805. It is suspected that Guass had already been using least squares methods between 1800 and 1805 during his study of the dwarf planet Ceres. Guass wanted to fit a curve to the orbit of Ceres based on his observations in order to study how the orbital dynamics of one celestial body is influenced by the gravity of another. In his case, he wanted to know how Jupiter's gravity perturbed the orbital trajectory of Ceres. Guass later published his Theoria Motus in 1809 which contained more detailed types of Least Squares analysis
+
+## References
+
+Bretscher, O. (2019). Linear algebra with applications. Pearson India Education Services.
+
+Forbes, E. G. (1978). The astronomical work of Carl Friedrich Gauss (1777–1855). Historia Mathematica, 5(2), 167–181. https://doi.org/10.1016/0315-0860(78)90048-4
+
+Kwiatkowski, R. (2020, December 4). Performing linear regression using the normal equation. Medium. Retrieved December 4, 2022, from https://towardsdatascience.com/performing-linear-regression-using-the-normal-equation-6372ed3c57
+
+Lawson, C. L., &amp; Hanson, R. J. (1974). Solving least squares problems. Prentice-Hall.
+
+Taboga, Marco (2021). "Normal equations", Lectures on probability theory and mathematical statistics. Kindle Direct Publishing. Online appendix. https://www.statlect.com/glossary/normal-equations.
+
+Nievergelt, Y. (2000). A tutorial history of least squares with applications to astronomy and geodesy. Journal of Computational and Applied Mathematics, 121(1-2), 37–72. https://doi.org/10.1016/s0377-0427(00)00343-5
+
