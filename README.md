@@ -75,7 +75,7 @@ The Cholesky algorithm can be written as a sequence of modifying the A matrix an
 
 The algorithm starts with an A matrix, at each step, $L_i$ is computed and then A is modified before going to the next step. The new A is used to form the next $L_i$ for a total of n steps. This algorith is written in a way where only the A and L matrix need to be stored to be more memory efficient. This algorith takes about $1/3n^3$ floating point operations which is about half the cost of LU factorization which is used for arbitrary square matrices. 
 
-To summarize, solving the normal equations using Cholesky decomposition is done by first computing $A^TA$ and $A^Tb%. Then, the Cholesky algorith is used to factor $A^TA$ into a form which can be solved using forward and backward substitution resulting in a solution vector, $x*$ which is th eleast squares solution.
+To summarize, solving the normal equations using Cholesky decomposition is done by first computing $A^TA$ and $A^Tb$. Then, the Cholesky algorithm is used to factor $A^TA$ into a form which can be solved using forward and backward substitution resulting in a solution vector, $x*$ which is th eleast squares solution.
 
 ## Conditioning and Error
 
