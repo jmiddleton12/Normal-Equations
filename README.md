@@ -65,9 +65,11 @@ $$A^TA = LL^T $$
 
 Once A^TA is factored using Cholesky factorization, the system can be solved in two steps using foward and backward substitution such as with other matrix decomposition methods:
 
-$$Lz = A^Tb$$, where z is an intermediate result vector.
+$$Lz = A^Tb$$ where z is an intermediate result vector.
 
-$$L^Tx = z$$, where x is our x* that corresponds to the least squares solution.
+$$L^Tx = z$$ where x is our x* that corresponds to the least squares solution.
+
+The Cholesky algorithm can be written as a sequence of modifying the A matrix and forming L_n matrices which are multiplied successively to ultimately compute L after n steps. Keep in mind that in this general form, A is an arbitrary semmetric, positive definite matrix. In the case of the normal equations, the A matrix we are factoring is actually $A^TA$. Another note about the notation below is that $b_i$ refers to the vector which is a portion of the $A^i$ matrix rather than the b vector which ison the right side of the norm al equations, and B^i is a block matrix which is a sub matrix of $A^i$ reffereing to the remaining part of the $A^i$ matrix where $A^i_(j,k), j>i and k>i$.
 
 
 
