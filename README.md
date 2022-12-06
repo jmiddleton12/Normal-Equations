@@ -9,8 +9,12 @@ The normal equations are the closed form solution to least squares problems. The
 $$A^TAx = A^Tb$$
 
 ***
-[Linear Least Squares](#linear-least-squares)
-
+1. [Linear Least Squares](#linear-least-squares)
+2. [Deriving the Normal Equations](#deriving-the-normal-equations)
+3. [Solving the Normal Equations](#solving-the-normal-equations)
+4. [Conditionging and Error](#conditioning-and-error)
+5. [History and Applications](#history-and-applications)
+6. [References](#references)
 ***
 
 ## Linear Least Squares
