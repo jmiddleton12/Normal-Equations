@@ -86,6 +86,6 @@ So, before even using any numerical method to solve the $A^TA$ matrix, precision
 
 As a general rule, for $K = cond(A)$ about $log_{10}(K) digits of precision are lost. So, squaring the condition number means the number of digits lost is doubled. That could result in having almost no precision in your final answer even if the method used to solve is very accurate. 
 
-Another major issue with normal equations are their succeptibility to rounding error in finite precision. If entries in A are below the machine precision $\Epsilon_{mach}$, then computing $A^TA$ can result in a singular matrix. As discussed above, even when numbers that small aren't being dealt with, computing$A^TA$ still makes the problem more ill-conditioned and rounding error in finite precision further increases the error.
+Another major issue with normal equations are their succeptibility to rounding error in finite precision. If entries in A are below the machine precision $\epsilon_{mach}$, then computing $A^TA$ can result in a singular matrix. As discussed above, even when numbers that small aren't being dealt with, computing$A^TA$ still makes the problem more ill-conditioned and rounding error in finite precision further increases the error.
 
 ## Applications
